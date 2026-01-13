@@ -1,0 +1,8 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+def get_driver():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    service = Service(r"C:\Users\asank\PycharmProjects\PythonProject\chromedriver.exe")
+    return webdriver.Chrome(service=service, options=options)
